@@ -164,6 +164,7 @@ ROOT_GENERATE_DICTIONARY(
 	    coreRootDict
 		"${CORE_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/core/src/coreLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/coreRootDict.cxx" "${library_sources}")
 
@@ -174,6 +175,7 @@ ROOT_GENERATE_DICTIONARY(
 	    eventDisplayRootDict
 		"${EVENTDISPLAY_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/eventDisplay/src/eventDisplayLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/eventDisplayRootDict.cxx" "${library_sources}")
 
@@ -191,6 +193,7 @@ ROOT_GENERATE_DICTIONARY(
 	    fittersRootDict
 		"${FITTERS_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/fitters/src/fittersLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/fittersRootDict.cxx" "${library_sources}")
 
@@ -206,6 +209,7 @@ ROOT_GENERATE_DICTIONARY(
 	    GBLRootDict
         "${GBL_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/GBL/src/GBLLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/GBLRootDict.cxx" "${library_sources}")
 
@@ -228,6 +232,7 @@ ROOT_GENERATE_DICTIONARY(
 		measurementsRootDict
 		${MEASUREMENTS_DICTIONARY_SOURCES}
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/measurements/src/measurementsLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/measurementsRootDict.cxx" "${library_sources}")
 
@@ -239,6 +244,7 @@ ROOT_GENERATE_DICTIONARY(
 	    trackRepsRootDict
 		"${TRACKREPS_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/trackReps/src/trackRepsLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/trackRepsRootDict.cxx" "${library_sources}")
 
@@ -252,6 +258,7 @@ ROOT_GENERATE_DICTIONARY(
 	    utilitiesRootDict
 		"${UTILITIES_DICTIONARY_SOURCES}"
 		LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/utilities/src/utilitiesLinkDef.h"
+		--noIncludePaths --inlineInputHeader
 )
 SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/utilitiesRootDict.cxx" "${library_sources}")
 
@@ -264,6 +271,7 @@ if(DEFINED RAVE)
 		    GFRaveRootDict
 			"${GFRAVE_DICTIONARY_SOURCES}"
 			LINKDEF "${CMAKE_CURRENT_SOURCE_DIR}/GFRave/src/GFRaveLinkDef.h"
+			--noIncludePaths --inlineInputHeader
 	)
 	SET(library_sources "${CMAKE_CURRENT_BINARY_DIR}/GFRaveRootDict.cxx" "${library_sources}")
 endif()
